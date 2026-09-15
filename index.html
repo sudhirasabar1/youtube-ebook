@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>0 to 1000 Subscribers | YouTube Growth Blueprint</title>
+
+  <meta name="description" content="Learn how to grow your YouTube channel from 0 to 1000 subscribers with practical strategies, scripts and checklists.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --purple: #6d28d9;
+      --dark: #17121f;
+      --muted: #756b82;
+      --light: #f8f5ff;
+      --border: #eadffb;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--dark);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--purple);
+    }
+
+    .nav-btn {
+      background: var(--purple);
+      color: white;
+      padding: 11px 19px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 75px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--purple);
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: var(--purple);
+    }
+
+    .hero-text {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .primary-btn {
+      display: inline-block;
+      background: var(--purple);
+      color: white;
+      padding: 16px 25px;
+      border-radius: 9px;
+      font-weight: 800;
+      box-shadow: 0 10px 25px #6d28d933;
+    }
+
+    .secondary-btn {
+      display: inline-block;
+      border: 1px solid #d9c7f2;
+      color: var(--purple);
+      background: white;
+      padding: 16px 25px;
+      border-radius: 9px;
+      font-weight: 800;
+    }
+
+    .trust {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* BOOK COVER */
+
+    .cover-area {
+      text-align: center;
+      position: relative;
+    }
+
+    .cover-area::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      background: #e8d8ff;
+      border-radius: 50%;
+      top: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(20px);
+      z-index: 0;
+    }
+
+    .cover {
+      position: relative;
+      z-index: 1;
+      width: min(360px, 90%);
+      border-radius: 12px;
+      box-shadow: 0 25px 55px #25133e35;
+    }
+
+    .cover-caption {
+      position: relative;
+      z-index: 1;
+      margin-top: 15px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* BENEFITS */
+
+    .benefits {
+      background: white;
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    .section-heading h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .benefit-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #fcfaff;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 13px;
+      background: #eee5ff;
+      display: grid;
+      place-items: center;
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .benefit-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .benefit-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* DOWNLOAD */
+
+    .download {
+      padding: 80px 0;
+    }
+
+    .download-box {
+      background: linear-gradient(135deg, #6d28d9, #4c1d95);
+      color: white;
+      border-radius: 22px;
+      padding: 55px 30px;
+      text-align: center;
+      box-shadow: 0 20px 50px #6d28d933;
+    }
+
+    .download-box h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .download-box p {
+      color: #e9ddff;
+      margin-bottom: 28px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: white;
+      color: var(--purple);
+      padding: 17px 30px;
+      border-radius: 9px;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .download-note {
+      font-size: 13px;
+      margin-top: 18px;
+      color: #e9ddff;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 0;
+      background: white;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+      .nav-inner {
+        min-height: 65px;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .nav-btn {
+        padding: 9px 13px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 45px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .trust {
+        justify-content: center;
+      }
+
+      .section-heading h2,
+      .download-box h2 {
+        font-size: 29px;
+      }
+
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit-card {
+        text-align: center;
+      }
+
+      .icon {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .download-box {
+        padding: 42px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">LEARN SMART ONLINE</div>
+
+      <a href="#download" class="nav-btn">
+        Get Ebook
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          The Growth Blueprint Series
+        </div>
+
+        <h1>
+          0 to <span>1,000</span><br>
+          Subscribers
+        </h1>
+
+        <p class="hero-text">
+          A practical YouTube growth blueprint for creators who want to build a channel, attract viewers and grow with confidence.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#download" class="primary-btn">
+            Download PDF Ebook
+          </a>
+
+          <a href="#benefits" class="secondary-btn">
+            Explore Ebook
+          </a>
+
+        </div>
+
+        <div class="trust">
+          <span>📘 Digital Ebook</span>
+          <span>🚀 YouTube Growth</span>
+          <span>✓ Practical Guide</span>
+        </div>
+
+      </div>
+
+
+      <!-- EBOOK COVER -->
+
+      <div class="cover-area">
+
+        <img
+          src="cover.png"
+          alt="0 to 1000 Subscribers YouTube Growth Blueprint Ebook"
+          class="cover"
+        >
+
+        <p class="cover-caption">
+          Your roadmap to better YouTube growth.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BENEFITS -->
+
+  <section class="benefits" id="benefits">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <h2>
+          Build Your YouTube Growth System
+        </h2>
+
+        <p>
+          Learn the fundamentals and take action with a clear roadmap.
+        </p>
+
+      </div>
+
+
+      <div class="benefit-grid">
+
+        <div class="benefit-card">
+
+          <div class="icon">📈</div>
+
+          <h3>
+            Understand Growth
+          </h3>
+
+          <p>
+            Learn the key concepts behind YouTube growth and discover what to focus on as a creator.
+          </p>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+          <div class="icon">🚀</div>
+
+          <h3>
+            Follow the Roadmap
+          </h3>
+
+          <p>
+            Use a step-by-step approach to move from your first subscribers toward 1,000.
+          </p>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+          <div class="icon">✅</div>
+
+          <h3>
+            Take Action
+          </h3>
+
+          <p>
+            Apply practical ideas, scripts and checklists to improve your content workflow.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DOWNLOAD SECTION -->
+
+  <section class="download" id="download">
+
+    <div class="container">
+
+      <div class="download-box">
+
+        <h2>
+          Ready to Grow Your Channel?
+        </h2>
+
+        <p>
+          Get your copy of 0 to 1000 Subscribers – A YouTube Growth Blueprint.
+        </p>
+
+        <!-- PDF DOWNLOAD BUTTON -->
+
+        <a
+          href="ebook.pdf"
+          download="0-to-1000-Subscribers-Ebook.pdf"
+          class="download-btn"
+        >
+          📥 Download PDF Ebook
+        </a>
+
+        <p class="download-note">
+          Digital PDF • Learn Smart Online
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+      © 2026 Learn Smart Online. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
